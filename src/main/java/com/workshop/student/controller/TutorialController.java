@@ -16,13 +16,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/tutorial")
 public class TutorialController {
 
-    @GetMapping({"","/"})
+    @GetMapping("/")
     public String getTutorial(
         @RequestParam(name ="id",required = false, defaultValue = "0") Integer id
     ) {
         System.out.println("-----getTutorial-----");
         System.err.println("ID;"+id);  
-        return "index";//view ไปหน้าไหน
+        return "template";//view ไปหน้าไหน
     }
     
 
